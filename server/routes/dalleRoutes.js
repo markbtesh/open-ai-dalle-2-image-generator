@@ -17,7 +17,7 @@ router.route("/").get((rq, res) => {
 });
 
 router.route("/").post(async (req, res) => {
-  req.setTimeout(60000);
+
   try {
     const { prompt } = req.body;
     const aiResponse = await openai.createImage({
